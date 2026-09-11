@@ -1,0 +1,15 @@
+{
+  "name": "prompt-master-marketplace",
+  "owner": {
+    "name": "RamC Venkatasamy"
+  },
+  "plugins": [
+    {
+      "name": "prompt-master",
+      "source": "./",
+      "description": "Generates production-ready, token-efficient prompts for any AI tool.",
+      "version": "1.8.0",
+      "category": "productivity"
+    }
+  ]
+}

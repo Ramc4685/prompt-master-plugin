@@ -19,10 +19,17 @@ skills/prompt-master/references/ templates.md and patterns.md
 
 ## Install
 
-From this directory's parent, add it as a local marketplace and install:
+Add this repo as a plugin marketplace, then install the plugin:
 
 ```bash
-claude plugin marketplace add /Users/ramc/Documents/Code/prompt-master-plugin
+claude plugin marketplace add Ramc4685/prompt-master-plugin
+claude plugin install prompt-master@prompt-master-marketplace
+```
+
+To work on it locally instead, point the marketplace at your clone:
+
+```bash
+claude plugin marketplace add /path/to/prompt-master-plugin
 claude plugin install prompt-master@prompt-master-marketplace
 ```
 

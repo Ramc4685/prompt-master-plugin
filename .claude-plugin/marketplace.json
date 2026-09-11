@@ -3,6 +3,9 @@
   "owner": {
     "name": "RamC Venkatasamy"
   },
+  "metadata": {
+    "description": "Prompt engineering plugin for Claude Code: writes production-ready, token-efficient prompts for LLMs, coding agents, image/video/voice AI, and workflow builders."
+  },
   "plugins": [
     {
       "name": "prompt-master",

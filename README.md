@@ -33,6 +33,27 @@ claude plugin marketplace add /path/to/prompt-master-plugin
 claude plugin install prompt-master@prompt-master-marketplace
 ```
 
+> **Pick one, not both.** Both commands register the same marketplace name
+> (`prompt-master-marketplace`). Running one after the other can leave a single
+> merged entry in `~/.claude/settings.json` that carries both a `repo` and a
+> `path`, which silently breaks the plugin: for a `github` source, `path` means
+> *"path to marketplace.json inside the repo"*, so a local directory there points
+> the manifest lookup at nothing. The plugin then still reports
+> `✔ enabled` in `claude plugin list` while its skill and command never load.
+> To switch between the two, remove the marketplace first:
+>
+> ```bash
+> claude plugin marketplace remove prompt-master-marketplace
+> ```
+>
+> A healthy GitHub-installed entry looks exactly like this — no `path` key:
+>
+> ```json
+> "prompt-master-marketplace": {
+>   "source": { "source": "github", "repo": "Ramc4685/prompt-master-plugin" }
+> }
+> ```
+
 ## Use
 
 The skill activates on its own when you ask for a prompt:
